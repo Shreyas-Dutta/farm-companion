@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 100 20% 97%;
+    --foreground: 130 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 130 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 130 30% 10%;
+
+    --primary: 130 55% 22%;
+    --primary-foreground: 80 60% 95%;
+
+    --secondary: 80 40% 90%;
+    --secondary-foreground: 130 55% 22%;
+
+    --muted: 100 15% 93%;
+    --muted-foreground: 130 10% 45%;
+
+    --accent: 45 90% 55%;
+    --accent-foreground: 130 55% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 100 15% 88%;
+    --input: 100 15% 88%;
+    --ring: 130 55% 22%;
+
+    --radius: 0.75rem;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 15%;
+    --success: 142 71% 35%;
+    --success-foreground: 142 71% 95%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 130 20% 6%;
+    --foreground: 80 20% 92%;
+
+    --card: 130 20% 9%;
+    --card-foreground: 80 20% 92%;
+
+    --popover: 130 20% 9%;
+    --popover-foreground: 80 20% 92%;
+
+    --primary: 130 50% 40%;
+    --primary-foreground: 80 60% 95%;
+
+    --secondary: 130 20% 15%;
+    --secondary-foreground: 80 20% 92%;
+
+    --muted: 130 15% 15%;
+    --muted-foreground: 100 10% 60%;
+
+    --accent: 45 90% 55%;
+    --accent-foreground: 130 55% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 130 15% 18%;
+    --input: 130 15% 18%;
+    --ring: 130 50% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
