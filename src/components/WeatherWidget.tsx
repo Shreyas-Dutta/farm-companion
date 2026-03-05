@@ -1,6 +1,9 @@
 import { Cloud, CloudRain, Sun, Wind, AlertTriangle, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
 import { useLanguage } from "@/hooks/useLanguage";
+=======
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
 
 const WeatherWidget = () => {
   // Mock weather data — will be replaced with real API
@@ -13,6 +16,7 @@ const WeatherWidget = () => {
     alert: null as string | null,
   };
 
+<<<<<<< HEAD
   const { language } = useLanguage();
   const isEnglish = language === "en";
 
@@ -39,6 +43,16 @@ const WeatherWidget = () => {
   const humidityLabel = isEnglish ? "Humidity" : "नमी";
   const windLabel = isEnglish ? "Wind" : "हवा";
 
+=======
+  const getWeatherIcon = () => {
+    switch (weather.condition) {
+      case "rainy": return <CloudRain className="w-10 h-10 text-primary-foreground" />;
+      case "cloudy": return <Cloud className="w-10 h-10 text-primary-foreground" />;
+      default: return <Sun className="w-10 h-10 text-primary-foreground" />;
+    }
+  };
+
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
   return (
     <Card className="bg-primary text-primary-foreground border-0 overflow-hidden">
       <CardContent className="p-4">
@@ -49,13 +63,18 @@ const WeatherWidget = () => {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-4xl font-bold">{weather.temp}°C</div>
+<<<<<<< HEAD
             <div className="text-sm opacity-90 font-hindi mt-1">{conditionText}</div>
+=======
+            <div className="text-sm opacity-90 font-hindi mt-1">धूप | Sunny</div>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
           </div>
           {getWeatherIcon()}
         </div>
         <div className="flex gap-4 mt-3 text-xs opacity-80">
           <div className="flex items-center gap-1">
             <Cloud className="w-3 h-3" />
+<<<<<<< HEAD
             <span>
               {humidityLabel} {weather.humidity}%
             </span>
@@ -65,6 +84,13 @@ const WeatherWidget = () => {
             <span>
               {windLabel} {weather.wind} km/h
             </span>
+=======
+            <span>नमी {weather.humidity}%</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Wind className="w-3 h-3" />
+            <span>हवा {weather.wind} km/h</span>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
           </div>
         </div>
         {weather.alert && (

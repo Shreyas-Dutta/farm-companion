@@ -47,7 +47,10 @@
     "cmdk": "^1.1.1",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
+<<<<<<< HEAD
     "firebase": "^12.10.0",
+=======
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
     "input-otp": "^1.4.2",
     "lucide-react": "^0.462.0",
     "next-themes": "^0.3.0",
@@ -66,9 +69,15 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
+<<<<<<< HEAD
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/jest-dom": "^6.6.0",
     "@testing-library/react": "^16.0.0",
+=======
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.0.0",
+    "@tailwindcss/typography": "^0.5.16",
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
     "@types/node": "^22.16.5",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",

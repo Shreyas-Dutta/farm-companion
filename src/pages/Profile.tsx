@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -16,6 +17,12 @@ type LocalProfile = {
 };
 
 const STORAGE_KEY = "farm-companion-profile";
+=======
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, User, MapPin, Mail, Sprout, History, Edit, ChevronRight, Leaf } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
 
 const myCrops = [
   { name: "गेहूं", nameEn: "Wheat", status: "growing", statusHi: "बढ़ रहा है", health: "healthy", emoji: "🌾", progress: 65 },
@@ -31,6 +38,7 @@ const scanHistory = [
 
 const Profile = () => {
   const navigate = useNavigate();
+<<<<<<< HEAD
   const { user, logout } = useAuth();
   const [profile, setProfile] = useState<LocalProfile | null>(null);
 
@@ -107,6 +115,8 @@ const Profile = () => {
     profile?.sex && profile.sex !== ""
       ? SEX_VALUE_LABELS[currentLanguage][profile.sex as SexCode] ?? profile.sex
       : "";
+=======
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
 
   return (
     <div className="min-h-screen bg-background pb-24">
@@ -120,6 +130,7 @@ const Profile = () => {
             <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center">
               <User className="w-8 h-8" />
             </div>
+<<<<<<< HEAD
               <div className="flex-1">
                 <h1 className="text-lg font-bold font-hindi">
                   {profile?.name || user?.displayName || "कृषक मित्र"}
@@ -155,6 +166,22 @@ const Profile = () => {
                 <LogOut className="w-4 h-4" />
               </Button>
             </div>
+=======
+            <div className="flex-1">
+              <h1 className="text-lg font-bold font-hindi">रामलाल शर्मा</h1>
+              <div className="flex items-center gap-1 text-xs opacity-80">
+                <MapPin className="w-3 h-3" />
+                <span className="font-hindi">जयपुर, राजस्थान</span>
+              </div>
+              <div className="flex items-center gap-1 text-xs opacity-80 mt-0.5">
+                <Mail className="w-3 h-3" />
+                <span>ramlal@email.com</span>
+              </div>
+            </div>
+            <Button variant="ghost" size="icon" className="text-primary-foreground">
+              <Edit className="w-4 h-4" />
+            </Button>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
           </div>
         </div>
       </header>

@@ -3,7 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Calendar, Star, Lightbulb, CalendarDays, ArrowLeft } from "lucide-react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+<<<<<<< HEAD
 import { useLanguage } from "@/hooks/useLanguage";
+=======
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
 
 const monthlyHighlights = [
   { title: "रबी सीजन 2026: गेहूं की नई किस्में", titleEn: "Rabi 2026: New wheat varieties", date: "मार्च 2026", image: "🌾" },
@@ -32,9 +35,12 @@ const News = () => {
   const [searchParams] = useSearchParams();
   const defaultTab = searchParams.get("tab") || "highlights";
   const navigate = useNavigate();
+<<<<<<< HEAD
   const { language } = useLanguage();
 
   const isEnglish = language === "en";
+=======
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
 
   return (
     <div className="min-h-screen bg-background pb-24">
@@ -43,6 +49,7 @@ const News = () => {
           <button onClick={() => navigate(-1)} className="mb-2">
             <ArrowLeft className="w-5 h-5" />
           </button>
+<<<<<<< HEAD
           <h1 className="text-lg font-bold font-hindi">
             {isEnglish ? "Agriculture news" : "कृषि समाचार"}
           </h1>
@@ -51,12 +58,17 @@ const News = () => {
               ? "Latest farming news and updates"
               : "कृषि से जुड़ी ताज़ा खबरें और अपडेट"}
           </p>
+=======
+          <h1 className="text-lg font-bold font-hindi">कृषि समाचार</h1>
+          <p className="text-xs opacity-80">Agriculture News & Updates</p>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
         </div>
       </header>
 
       <div className="max-w-lg mx-auto px-4 mt-4">
         <Tabs defaultValue={defaultTab}>
           <TabsList className="w-full grid grid-cols-4 bg-muted">
+<<<<<<< HEAD
             <TabsTrigger value="highlights" className="text-xs font-hindi">
               {isEnglish ? "Monthly" : "मासिक"}
             </TabsTrigger>
@@ -69,6 +81,12 @@ const News = () => {
             <TabsTrigger value="events" className="text-xs font-hindi">
               {isEnglish ? "Events" : "कार्यक्रम"}
             </TabsTrigger>
+=======
+            <TabsTrigger value="highlights" className="text-xs font-hindi">मासिक</TabsTrigger>
+            <TabsTrigger value="stories" className="text-xs font-hindi">सफलता</TabsTrigger>
+            <TabsTrigger value="tips" className="text-xs font-hindi">सुझाव</TabsTrigger>
+            <TabsTrigger value="events" className="text-xs font-hindi">कार्यक्रम</TabsTrigger>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
           </TabsList>
 
           <TabsContent value="highlights" className="space-y-3 mt-4">
@@ -77,12 +95,20 @@ const News = () => {
                 <CardContent className="p-4 flex items-start gap-3">
                   <span className="text-3xl">{item.image}</span>
                   <div className="flex-1">
+<<<<<<< HEAD
                     <h3 className="text-sm font-semibold font-hindi">
                       {isEnglish ? item.titleEn : item.title}
                     </h3>
                     <div className="flex items-center gap-1 mt-2 text-xs text-muted-foreground">
                       <Calendar className="w-3 h-3" />
                     <span className="font-hindi">{item.date}</span>
+=======
+                    <h3 className="text-sm font-semibold font-hindi">{item.title}</h3>
+                    <p className="text-xs text-muted-foreground mt-1">{item.titleEn}</p>
+                    <div className="flex items-center gap-1 mt-2 text-xs text-muted-foreground">
+                      <Calendar className="w-3 h-3" />
+                      <span className="font-hindi">{item.date}</span>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
                     </div>
                   </div>
                 </CardContent>
@@ -98,9 +124,14 @@ const News = () => {
                     <span className="text-2xl">{item.emoji}</span>
                     <span className="text-sm font-semibold font-hindi">{item.name}</span>
                   </div>
+<<<<<<< HEAD
                   <p className="text-sm font-hindi text-foreground">
                     {isEnglish ? item.storyEn : item.story}
                   </p>
+=======
+                  <p className="text-sm font-hindi text-foreground">{item.story}</p>
+                  <p className="text-xs text-muted-foreground mt-1 italic">{item.storyEn}</p>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
                 </CardContent>
               </Card>
             ))}
@@ -112,9 +143,14 @@ const News = () => {
                 <CardContent className="p-4 flex items-start gap-3">
                   <span className="text-2xl">{item.icon}</span>
                   <div>
+<<<<<<< HEAD
                     <p className="text-sm font-hindi text-foreground">
                       {isEnglish ? item.tipEn : item.tip}
                     </p>
+=======
+                    <p className="text-sm font-hindi text-foreground">{item.tip}</p>
+                    <p className="text-xs text-muted-foreground mt-1 italic">{item.tipEn}</p>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
                   </div>
                 </CardContent>
               </Card>
@@ -127,10 +163,16 @@ const News = () => {
                 <CardContent className="p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{item.emoji}</span>
+<<<<<<< HEAD
                     <h3 className="text-sm font-semibold font-hindi">
                       {isEnglish ? item.nameEn : item.name}
                     </h3>
                   </div>
+=======
+                    <h3 className="text-sm font-semibold font-hindi">{item.name}</h3>
+                  </div>
+                  <p className="text-xs text-muted-foreground">{item.nameEn}</p>
+>>>>>>> aa7cc908cefec79602e0ee60a1f2137c1671efe8
                   <div className="flex gap-4 mt-2 text-xs text-muted-foreground">
                     <span className="font-hindi">📅 {item.date}</span>
                     <span className="font-hindi">📍 {item.location}</span>
